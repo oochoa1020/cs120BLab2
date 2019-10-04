@@ -14,18 +14,42 @@
 
 int main(void) {
 	DDRA = 0x00; PORTA = 0xFF;
-	DDRB = 0xFF; PORTB = 0x00;
-	unsigned char tmpB = 0x00;
+	DDRC = 0xFF; PORTC = 0x00;
+	unsigned char tmpC = 0x00;
 	unsigned char tmpA = 0x00;
+	unsigned char curA = 0x00;
+	int numAvailable = 4;
 	while(1) {
-		tmpA = PINA & 0x01;
-		if (tmpA == 0x01) {
-			tmpB = (tmpB & 0xFC) | 0x01;
+		tmpA = PINA & 0x0F;
+		curA = tmpA & 0x01
+		numAvailable = 4;
+		if (curA == 0x01) {
+			
 		}
 		else {
-			tmpB = (tmpB & 0xFC) | 0x00;
+			printf("0")
 		}
-		PORTB = tmpB;
+		curA = tmpA & 0x02
+                if (curA == 0x02) {
+                        printf("1")
+                }
+                else {
+                        printf("0")
+                }
+		curA = tmpA & 0x04
+                if (curA == 0x04) {
+                        printf("1")
+                }
+                else {
+                        printf("0")
+                }
+		curA = tmpA & 0x08
+                if (curA == 0x08) {
+                        printf("1")
+                }
+                else {
+                        printf("0")
+                }
 	}
 	return 1;
 }
