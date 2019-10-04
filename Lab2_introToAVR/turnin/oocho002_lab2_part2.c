@@ -21,23 +21,23 @@ int main(void) {
 	unsigned char cntAvail = 0x00;
 	while(1) {
 		tmpA = PINA & 0x0F;
-		curA = tmpA & 0x01
+		curA = tmpA & 0x01;
 		cntAvail = 0x00;
 		if (curA == 0x01) {}
 		else {
 			cntAvail = cntAvail + 1;
 		}
-		curA = tmpA & 0x02
+		curA = tmpA & 0x02;
                 if (curA == 0x02) {}
                 else {
                         cntAvail = cntAvail + 1;
                 }
-		curA = tmpA & 0x04
+		curA = tmpA & 0x04;
                 if (curA == 0x04) {}
                 else {
                         cntAvail = cntAvail + 1;
                 }
-		curA = tmpA & 0x08
+		curA = tmpA & 0x08;
                 if (curA == 0x08) {}
                 else {
                         cntAvail = cntAvail + 1;
